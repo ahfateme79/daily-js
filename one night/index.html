@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // How Much is True?
+      let array = [true, true, false, false, true, false];
+      let result = 0;
+      function countTrue(arr) {
+        return alert(arr.filter((x) => x == true).length);
+      }
+      countTrue(array);
+
+      //A Redundant Function
+      function redundant(str) {
+        return () => str;
+      }
+      const f1 = redundant("apple");
+      alert(f1());
+
+      //Function Factory
+      function makePlusFunction(baseNum) {
+        return (number) => baseNum + number;
+      }
+      const plusfive = makePlusFunction(5);
+      alert(plusfive(2));
+      const plusten=makePlusFunction(10)
+      alert(plusten(5))
+    </script>
+  </body>
+</html>
