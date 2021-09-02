@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        //Product of Digits of Sum
+        function sumDigProd(...argu) {
+          let sum = [...argu].reduce((a, v) => a + v);
+          while (sum > 9) {
+            sum = sum
+              .toString()
+              .split("")
+              .reduce((a, v) => a * v);
+          }
+          alert(sum);
+        }
+      sumDigProd(16, 28);
+    </script>
+  </body>
+</html>

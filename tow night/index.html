@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Seven Boom!
+      function sevenBoom(arr) {
+        if (arr.join().includes(7)) {
+          alert("Boom!");
+        } else {
+          alert("there is no 7 in the array");
+        }
+      }
+      const array = [1, 2, 3, 6, 97];
+      sevenBoom(array);
+
+      //Number of Boomerangs
+      function countBoomerangs(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == arr[i + 2] && arr[i + 1] != arr[i]) {
+            count++;
+          }
+        }
+        alert(count);
+      }
+      const numbers = [5, 6, 6, 7, 6, 3, 9];
+      countBoomerangs(numbers);
+
+      //Oddish vs. Evenish
+      function oddishOrEvenish(num) {
+        alert(
+          `${num}`.split("").reduce((a, b) => a * 1 + b * 1) % 2 == 0
+            ? "Evenish"
+            : "Oddish"
+        );
+      }
+      oddishOrEvenish(4433);
+    </script>
+  </body>
+</html>
